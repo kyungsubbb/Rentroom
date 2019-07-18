@@ -20,13 +20,21 @@
                     <img alt="" data-src="https://cdn-class.likelion.org/static/assets/img/avatar.png" data-src-retina="https://cdn-class.likelion.org/static/assets/img/avatar_small_2x.png" height="32" src="https://cdn-class.likelion.org/static/assets/img/avatar_small_2x.png" width="32">
                 </span>
             </button>
+            {% if user.is_authenticated %}
             <div class="dropdown-menu dropdown-menu-right profile-dropdown" role="menu">
-                <a class="dropdown-item" href="#">회원가입</a>
-                <a class="dropdown-item" href="#">로그인</a>
-                <a class="dropdown-item" href="#">로그아웃</a>
                 <a class="dropdown-item" href="#">my page</a>
                 <a class="dropdown-item" href="{% url 'register' %}">방 등록하기</a>
+                <a class="dropdown-item" href="javascript:{document.getElementById('logout').submit()}">로그아웃</a>
+                <form id="logout" method="POST" action="{% url 'logout' %}">
+                    {% csrf_token %} <input type="hidden" />
+                </form>
             </div>
+            {% else %}
+            <div class="dropdown-menu dropdown-menu-right profile-dropdown" role="menu">
+                <a class="dropdown-item" href="{% url 'signup' %}">회원가입</a>
+                <a class="dropdown-item" href="{% url 'login' %}">로그인</a>
+            </div>
+            {% endif %}
         </div>
         </div>
     </nav>
