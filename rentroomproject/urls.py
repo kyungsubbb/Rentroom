@@ -9,4 +9,5 @@ urlpatterns = [
     path('', room.views.home, name="home"),
     path('room/register/', room.views.register, name="register"),
     path('room/<int:room_id>', room.views.detail, name="detail"),
+    path('create', room.views.create, name="create"),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

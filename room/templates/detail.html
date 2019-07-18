@@ -1,6 +1,26 @@
 {% extends 'base.html' %}
 
+<body>
 {% block contents %}
 <h1>자세히 보기 페이지입니다.</h1>
+<div class = "container">
+    <h1>{{room.title}}</h1>
+    <p>{{room.pub_date}}</p>
+    <p>{{room.mainimg}}</p>
+    <p>{{room.roomtype}}</p>
+    <p>{{room.price}}</p>
+    <p>{{room.start_date}}</p>
+    <p>{{room.end_date}}</p>
+    <p>{{room.phonenumber}}</p>
+    <p>{{room.description}}</p>
+    <p>{{room.img1}}</p>
+    <p>{{room.img2}}</p>
+    <p>{{room.img3}}</p>
+    <br><br>
+
+    <button type = "button" class="btn btn-outline-dark"><a href = "{% url 'home'%}">홈으로 돌아가기</a></button>
+</div>
+
 {% endblock %}
 
+</body>
