@@ -1,8 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>당신을 위한 맞춤공간을 빌려드립니다.</title>
+</head>
+<style>
+.logo{
+    display:flex; 
+    flex-wrap: wrap;
+    text-align: center;
+    justify-content: center;
+    margin: 50px;
+  
+}
+.recent{
+  text-align: center;
+}
+.recent_title{
+  margin : 30px;
+  text-align: left;
+}
+.recent{
+    display:flex; 
+    flex-wrap: wrap;
+    text-align: center;
+    justify-content: center;
+    /* padding: 0px 100px; */
+}
+.child {
+    background-color:white;
+    width: 200px;
+    border: 1px solid white;
+    border-radius: 10px;
+    padding: 10px;
+    margin: 10px;
+  
+}
+.child img{
+    width: 200px;
+    height: 200px;
+    border-radius: 10px;
+    padding: 10px;
+}
+.detail{
+  text-align: center;
+}
+.col-4{
+  padding: 3px;
+}
+</style>
+<body>
 {% extends 'base.html' %}
 {% load staticfiles %}
 
 {% block contents %}
-<h1>home</h1>
+<div class = "logo">
+  <br>
+  <br>
+  <br>
+  <img src="{% static 'rentroom.jpg' %}" alt="rentroom">
+  <br>
+  <div>
+  <form class="styled__SearchForm-sc-10v4ocj-3 fRnXmp">
+    <div class="styled__Box-sc-10v4ocj-4 kMYYOo">
+      <svg width="18" height="18" viewBox="0 0 18 18">
+        <g fill="none" fill-rule="evenodd" stroke="#222">
+          <circle cx="7.5" cy="7.5" r="6.5"></circle>
+          <path d="M12 12l5 5"></path>
+        </g>
+      </svg>
+      <input type="text" autocomplete="off" class="styled__SearchInput-sc-10v4ocj-5 kZIxja" name="keyword">
+      <button class="styled__SearchBtn-sc-10v4ocj-6 kvrxoz">방 찾기</button>
+    </div>
+  </form>
+</div>
+</div>
 
 {%for room in rooms.all %}
 <div class="col-md-4">
@@ -21,3 +95,4 @@
 {% endfor %}
 
 {% endblock %}
+</body>
