@@ -45,6 +45,7 @@ ROOT_URLCONF = 'rentroomproject.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
+        'DIRS': [],
         'DIRS': ['rentroomproject/templates'],
         'APP_DIRS': True,
         'OPTIONS': {

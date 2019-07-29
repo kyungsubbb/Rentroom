@@ -16,41 +16,65 @@
     margin: 50px;
   
 }
-.recent{
-  text-align: center;
+.center{
+  display: flex;
+  justify-content: center;
+  
+  padding : 10px;
 }
-.recent_title{
-  margin : 30px;
-  text-align: left;
-}
-.recent{
-    display:flex; 
-    flex-wrap: wrap;
-    text-align: center;
-    justify-content: center;
-    /* padding: 0px 100px; */
-}
-.child {
-    background-color:white;
-    width: 200px;
-    border: 1px solid white;
-    border-radius: 10px;
-    padding: 10px;
-    margin: 10px;
+.search_bar{
+  height: 50px;
+  width: 800px;
+  border: 1px solid #a8a8a8;
+  background : #ffffff;
   
 }
-.child img{
-    width: 200px;
-    height: 200px;
-    border-radius: 10px;
-    padding: 10px;
+.text{
+  font-size : 16px;
+  width: 500px;
+  padding: 10px;
+  border: 0px;
+  outline: none;
+  float: left;
 }
-.detail{
-  text-align: center;
+.button{
+  width: 100px;
+  height: 100%;
+  background-color: rgb(255, 166, 0);
+  border: 0px;
+  outline: none;
+  float: right;
+  color : #ffffff;
 }
-.col-4{
-  padding: 3px;
+.card{
+    float: left;
+    width: 400px;
+    height: 500px;
+    padding-left: 10px;
+    padding-right: 10px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    
+  }
+
+  .card figure{
+  display: inline-block;
+  height: 600px;
+  border: 1px solid rgba(0,0,0,0.2);
+  margin:0;
+  margin-bottom: 15px;
+  margin-top: 15px;
+  padding:10px;
+  box-shadow: 2px 2px 5px rgba(0,0,0,0.5);
 }
+.card figure img{
+ width : 350px;
+ height : 250px;
+}
+input:-ms-input-placeholder{color : #a8a8a8;}
+input::-webkit-input-placeholder {color : #a8a8a8;}
+input::-moz-placeholder{color:#a8a8a8;}
 </style>
 <body>
   {% extends 'base.html' %}
@@ -63,36 +87,32 @@
   <br>
   <img src="{% static 'rentroom.jpg' %}" alt="rentroom">
   <br>
-  <div>
-  <form class="styled__SearchForm-sc-10v4ocj-3 fRnXmp">
-    <div class="styled__Box-sc-10v4ocj-4 kMYYOo">
-      <svg width="18" height="18" viewBox="0 0 18 18">
-        <g fill="none" fill-rule="evenodd" stroke="#222">
-          <circle cx="7.5" cy="7.5" r="6.5"></circle>
-          <path d="M12 12l5 5"></path>
-        </g>
-      </svg>
-      <input type="text" autocomplete="off" class="styled__SearchInput-sc-10v4ocj-5 kZIxja" name="keyword">
-      <button class="styled__SearchBtn-sc-10v4ocj-6 kvrxoz">방 찾기</button>
-    </div>
-  </form>
+  <div class="search_bar">
+    <input class="text" type="text" placeholder="검색어를 입력해주세요.">
+    <button class="button">찾아보기</button>
 </div>
 </div>
+<br>
+<br><hr>
+<br>
 
-{%for room in rooms.all %}
-<div class="col-md-4">
-        <div class="card mb-4 shadow-sm">
-          <img src="{{room.mainimg.url}}" height=300> 
-          <div class="card-body">
-            <p class="card-text"> {{room.description}} </p>
-            <div class="d-flex justify-content-between align-items-center">
-              <div class="btn-group">
-                <a href = "{% url 'detail' room.id %}">상세보기</a>
-              </div>
-            </div>
-          </div>
+<h3 style='text-align : center'>당신이 원하는 방을 찾아보세요 !</h3><br>
+<section class='center'>
+    {%for room in rooms.all %}
+    <a href="{% url 'detail' room.id%}">
+    <div class='card'>
+        <figure>
+        <div class='card-img'>
+          <img src="{{room.mainimg.url}}" height=300>
         </div>
-      </div>
+      <div class='card-body'>
+       <h6>{{room.roomtype}}</h6>
+       <h3>{{room.price}}</h3>
+       <h6>{{room.description}}</h6>
+     </div>
+        </figure>
+    </div>
+    </a>
 {% endfor %}
 
 {% endblock %}
