@@ -1,8 +1,4 @@
-{% extends 'base.html' %}
-{% load staticfiles %}
 
-
-{% block content %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -17,6 +13,7 @@
     flex-wrap: wrap;
     text-align: center;
     justify-content: center;
+    margin: 50px;
   
 }
 .recent{
@@ -51,34 +48,36 @@
 .detail{
   text-align: center;
 }
+.col-4{
+  padding: 3px;
+}
 </style>
 <body>
+  {% extends 'base.html' %}
+  {% load staticfiles %}
 
-
+{% block contents %}
 <div class = "logo">
-    <br>
-    <br>
-    <br>
-    <img src="./static/rentroom.jpg" alt="rentroom">
-    <form class="styled__SearchForm-sc-10v4ocj-3 fRnXmp">
-      <div class="styled__Box-sc-10v4ocj-4 kMYYOo">
-        <svg width="18" height="18" viewBox="0 0 18 18">
-          <g fill="none" fill-rule="evenodd" stroke="#222">
-            <circle cx="7.5" cy="7.5" r="6.5"></circle>
-            <path d="M12 12l5 5"></path>
-          </g>
-        </svg>
-        <input type="text" autocomplete="off" class="styled__SearchInput-sc-10v4ocj-5 kZIxja" name="keyword">
-        <button class="styled__SearchBtn-sc-10v4ocj-6 kvrxoz">방 찾기</button>
-      </div>
-    </form>
+  <br>
+  <br>
+  <br>
+  <img src="{% static 'rentroom.jpg' %}" alt="rentroom">
+  <br>
+  <div>
+  <form class="styled__SearchForm-sc-10v4ocj-3 fRnXmp">
+    <div class="styled__Box-sc-10v4ocj-4 kMYYOo">
+      <svg width="18" height="18" viewBox="0 0 18 18">
+        <g fill="none" fill-rule="evenodd" stroke="#222">
+          <circle cx="7.5" cy="7.5" r="6.5"></circle>
+          <path d="M12 12l5 5"></path>
+        </g>
+      </svg>
+      <input type="text" autocomplete="off" class="styled__SearchInput-sc-10v4ocj-5 kZIxja" name="keyword">
+      <button class="styled__SearchBtn-sc-10v4ocj-6 kvrxoz">방 찾기</button>
+    </div>
+  </form>
 </div>
-
-      <section>
-          <br>
-          <br>
-          <br>
-        <h3 style="text-align: center">최근 본 방</h3>
+</div>
 
 {%for room in rooms.all %}
 <div class="col-md-4">
@@ -95,8 +94,6 @@
         </div>
       </div>
 {% endfor %}
-      </section>
 
-</body>
-</html>
 {% endblock %}
+</body>

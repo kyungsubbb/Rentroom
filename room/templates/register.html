@@ -1,48 +1,15 @@
 {% extends 'base.html' %}
-
 {% block contents %}
+<br>
 <h1>방 등록 페이지입니다.</h1>
 <div class = "container">
-  <div>
-      <form action = "{%url 'create'%}">
-          <br><br>
-          <h4>제목 : </h4>
-          <input type = "text" name = "title">
-          <br><br>
-          <h4>방 종류 : </h4>
-          <input type = "text" name = "roomtype">
-          <br><br>
-          <h4>가격 : </h4>
-          <input type = "text" name = "price">
-          <br><br>
-          <h4>시작 날짜 : </h4>
-          <input type = "date" name = "start_date">
-          <br><br>
-          <h4>종료 날짜 : </h4>
-          <input type = "date" name = "end_date">
-          <br><br>
-          <h4>전화번호 : </h4>
-          <input type = "tel" name = "phonenumber">
-          <br><br>
-          <h4>방 설명 : </h4>
-          <textarea cols="100" rows="10" name = "description"></textarea>
-          <br><br>
-          <h4>대표사진 : </h4>
-          <input type = "file" name = "mainimg">
-          <br><br>
-          <h4>사진1 : </h4>
-          <input type = "file" name = "img1">
-          <br><br>
-          <h4>사진2 : </h4>
-          <input type = "file" name = "img2">
-          <br><br>
-          <h4>사진3 : </h4>
-          <input type = "file" name = "img3">
-          <br><br>
-          <input type = "submit" value="등록하기">
-      </form>
-  </div>
-  </div>
-
-
+    <form method="POST" action='' enctype="multipart/form-data">
+      {% csrf_token %}
+      <table>
+        {{form.as_table}}
+      </table>
+      <br>
+      <input class="btn btn-dark" type="submit" value="제출하기">
+    </form>
+    </div>
 {% endblock %}
