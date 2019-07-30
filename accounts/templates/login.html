@@ -8,18 +8,17 @@
 {% endif %}
 
 <div class="container">
-<h1>Login</h1>
+<br><br><br><br>
+<h1>Login</h1><br>
 <div class="card" style="width: 18rem;">
     <div class="container">
     <form method="POST" action="{% url 'login' %}">
         {% csrf_token %}
-        Username
         <br>
-        <input name="username" type="text" value="">
+        <input name="username" type="text" value="" placeholder="name">
         <br>
-        Password
         <br>
-        <input name="password" type="password" value="">
+        <input name="password" type="password" value="" placeholder="password">
         <br>
         <br>
         <input class="btn btn-primary" type="submit" value="Login">
@@ -27,4 +26,19 @@
     </div>
 </div>
 </div>
+
+<style>
+    .container{
+        position: relative;
+        width: 300px;
+        height: 200px;
+        text-align: center;
+    }
+    .card{
+        position: absolute;
+        width: 100px;
+        height: 13rem;
+        
+    }
+</style>
 {% endblock %}

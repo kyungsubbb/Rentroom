@@ -11,13 +11,13 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 </head>
 <body>
-    <nav class="navbar navbar-light bg-light">
+    <nav class="navbar navbar-light bg-light fixed-top">
         <a class="navbar-brand" href="{% url 'home' %}">RentRoom</a>
         <div class="d-flex align-items-center">
         <div class="dropdown pull-right d-lg-block ">
             <button aria-expanded="false" aria-haspopup="true" class="profile-dropdown-toggle" data-toggle="dropdown" type="button" style="color:white; background-color: white">
                 <span class="thumbnail-wrapper d32 circular inline">
-                    <img alt="" data-src="https://cdn-class.likelion.org/static/assets/img/avatar.png" data-src-retina="https://cdn-class.likelion.org/static/assets/img/avatar_small_2x.png" height="32" src="https://cdn-class.likelion.org/static/assets/img/avatar_small_2x.png" width="32">
+                    <img alt="" src="https://data.ac-illust.com/data/thumbnails/3e/3e6cdb3a5f7477f5a0dd059631654f28_t.jpeg" height="32" width="32">
                 </span>
             </button>
             {% if user.is_authenticated %}
