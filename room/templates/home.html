@@ -16,8 +16,11 @@
   
 }
 .center{
-  display: flex;
+  display: grid;
   justify-content: center;
+  align-items: center;
+  grid-auto-rows: minmax(500px,auto);
+  grid-template-columns: repeat(4, 1fr);
   
   padding : 10px;
 }
@@ -48,18 +51,19 @@
 .card{
     float: left;
     width: 400px;
-    height: 500px;
+    height: 600px;
     padding-left: 10px;
     padding-right: 10px;
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
+   
     
   }
 
   .card figure{
   display: inline-block;
-  height: 600px;
+  height: 650px;
   border: 1px solid rgba(0,0,0,0.2);
   margin:0;
   margin-bottom: 15px;
@@ -69,7 +73,7 @@
 }
 .card figure img{
  width : 350px;
- height : 250px;
+ height : 350px;
 }
 input:-ms-input-placeholder{color : #a8a8a8;}
 input::-webkit-input-placeholder {color : #a8a8a8;}
