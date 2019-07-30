@@ -9,10 +9,10 @@ class Room(models.Model):
     end_date = models.DateField()
     phonenumber = models.IntegerField()
     description = models.TextField()
-    mainimg = models.ImageField(upload_to='images/')
-    img1 = models.ImageField(upload_to='images/')
-    img2 = models.ImageField(upload_to='images/')
-    img3 = models.ImageField(upload_to='images/')
+    mainimg = models.ImageField(upload_to='images/', blank=True)
+    img1 = models.ImageField(upload_to='images/', blank=True)
+    img2 = models.ImageField(upload_to='images/', blank=True)
+    img3 = models.ImageField(upload_to='images/', blank=True)
 
     def __str__(self):
         return self.title

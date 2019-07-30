@@ -30,6 +30,7 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', room.views.home, name="home"),
     path('room/register/', room.views.register, name="register"),
+    path('room/newroom/',room.views.roompost, name="newroom"),
     path('room/<int:room_id>', room.views.detail, name="detail"),
     path('create', room.views.create, name="create"),
     path('accounts/signup', accounts.views.signup, name="signup"),

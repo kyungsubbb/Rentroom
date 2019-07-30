@@ -1,15 +1,21 @@
 {% extends 'base.html' %}
 {% block contents %}
+
+
 <br>
-<h1>방 등록 페이지입니다.</h1>
+<h3>방 등록 페이지입니다.</h3>
+<br><br>
 <div class = "container">
     <form method="POST" action='' enctype="multipart/form-data">
-      {% csrf_token %}
-      <table>
-        {{form.as_table}}
-      </table>
-      <br>
-      <input class="btn btn-dark" type="submit" value="제출하기">
+        {% csrf_token %}
+        <table>
+            {{form.as_table}}
+        </table>
+        <br><br>
+
+            <input class="btn btn-dark" type="submit" value="제출하기">
     </form>
-    </div>
+
+</div>
+
 {% endblock %}
