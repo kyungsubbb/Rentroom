@@ -1,0 +1,38 @@
+{% extends 'base.html' %}
+
+{% block contents %}
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<div id="content">
+    <h1>Search</h1>
+
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_table }}
+        <input type="submit" value="Search">
+    </form>
+
+    <br><br>
+
+    {% if object_list %}
+        {% for room in object_list %}
+            <h2><a href="{% url 'detail' room.id%}">{{ room.title }}</a></h2>
+            {{ room.modify_date|date:'N d, Y' }}
+            <p>{{ room.description }}</p>
+        {% endfor %}
+    {% elif search_term %}
+        <b><h6>검색 결과가 존재하지 않습니다.</h6></b>
+    {% endif %}
+</div>
+
+
+{% endblock %}
+    

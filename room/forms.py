@@ -29,3 +29,6 @@ class RoomPost(forms.ModelForm):
             'img2': '사진2',
             'img3': '사진3'
         }
+
+class PostSearchForm(forms.Form) :
+    search_word = forms.CharField(label = 'Search Word')
