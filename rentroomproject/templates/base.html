@@ -11,32 +11,46 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 </head>
 <body>
-    <nav class="navbar navbar-light bg-light fixed-top">
+    <nav class="navbar navbar-light bg-white fixed-top" style="border-bottom: 1px solid rgb(235, 235, 235)">
         <a class="navbar-brand" href="{% url 'home' %}">RentRoom</a>
-        <div class="d-flex align-items-center">
-        <div class="dropdown pull-right d-lg-block ">
-            <button aria-expanded="false" aria-haspopup="true" class="profile-dropdown-toggle" data-toggle="dropdown" type="button" style="color:white; background-color: white">
-                <span class="thumbnail-wrapper d32 circular inline">
-                    <img alt="" src="https://data.ac-illust.com/data/thumbnails/3e/3e6cdb3a5f7477f5a0dd059631654f28_t.jpeg" height="32" width="32">
-                </span>
-            </button>
             {% if user.is_authenticated %}
-            <div class="dropdown-menu dropdown-menu-right profile-dropdown" role="menu">
-                <a class="dropdown-item" href="#">my page</a>
-                <a class="dropdown-item" href="{% url 'newroom' %}">방 등록하기</a>
-                <a class="dropdown-item" href="javascript:{document.getElementById('logout').submit()}">로그아웃</a>
+            <ul class="navbar-nav" style="display: inline-block">
+            <li class="nav-item active" style="display: inline-block">
+                <a class="nav-link" href="#">방찾기 <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item" style="display: inline-block">
+                <a class="nav-link" href="#">관심목록</a>
+            </li>
+            <li class="nav-item" style="display: inline-block">
+                <a class="nav-link" href="{% url 'register' %}">방내놓기</a>
+            </li>
+            <li class="nav-item" style="display: inline-block">
+                <a class="nav-link" href="javascript:{document.getElementById('logout').submit()}" tabindex="-1">로그아웃</a>
                 <form id="logout" method="POST" action="{% url 'logout' %}">
                     {% csrf_token %} <input type="hidden" />
                 </form>
-            </div>
+            </li>
+            </ul>
             {% else %}
-            <div class="dropdown-menu dropdown-menu-right profile-dropdown" role="menu">
-                <a class="dropdown-item" href="{% url 'signup' %}">회원가입</a>
-                <a class="dropdown-item" href="{% url 'login' %}">로그인</a>
-            </div>
+            <ul class="navbar-nav" style="display: inline-block">
+            <li class="nav-item active" style="display: inline-block">
+                <a class="nav-link" href="#">방찾기 <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item" style="display: inline-block">
+                <a class="nav-link" href="#">관심목록</a>
+            </li>
+            <li class="nav-item" style="display: inline-block">
+                <a class="nav-link" href="{% url 'login' %}">방내놓기</a>
+            </li>
+            <li class="nav-item" style="display: inline-block">
+                <a class="nav-link" href="{% url 'signup' %}" tabindex="-1">회원가입</a>
+            </li>
+            <li class="nav-item" style="display: inline-block">
+                <a class="nav-link" href="{% url 'login' %}" tabindex="-1">로그인</a>
+            </li>
+            </ul>
             {% endif %}
-        </div>
-        </div>
+        <!-- </div> -->
     </nav>
 </body>
 </html>
