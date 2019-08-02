@@ -75,6 +75,7 @@ input:-ms-input-placeholder{color : #a8a8a8;}
 input::-webkit-input-placeholder {color : #a8a8a8;}
 input::-moz-placeholder{color:#a8a8a8;}
 </style>
+
 <body>
 {% extends 'base.html' %}
 {% load staticfiles %}
@@ -97,7 +98,7 @@ input::-moz-placeholder{color:#a8a8a8;}
 
 <h3 style='text-align : center'>당신이 원하는 방을 찾아보세요 !</h3><br>
 <section class='center'>
-    {%for room in rooms.all %}
+    <!-- {%for room in rooms.all %}
     <a href="{% url 'detail' room.id%}">
     <div class='card'>
         <figure>
@@ -112,7 +113,25 @@ input::-moz-placeholder{color:#a8a8a8;}
         </figure>
     </div>
     </a>
-{% endfor %}
+    {% endfor %} -->
 
+    
+    {% for room in rooms.all %}
+    <a href="{% url 'detail' room.id%}" style=" text-decoration:none ; color:#000000">
+    <div class="card-group" style="width:20rem">
+      <div class="card" style="height: 22rem">
+        <div class="card-img">
+          <img src="{{room.mainimg.url}}" class="card-img-top" alt="room">
+        </div>
+        <div class="card-body">
+          <h5 class="card-title">{{room.title}}</h5>
+          <p class="card-text">{{room.roomtype}} {{room.price}}</p>
+          <p class="card-text"><small class="text-muted">✔죽전 단국대 ✔정문까지 5분 ✔풀옵션 ✔저렴한 원룸이예요~!</small></p>
+        </div>
+      </div>
+    </div>
+    </a>
+    {% endfor %}
+         
 {% endblock %}
 </body>
