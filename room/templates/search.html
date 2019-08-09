@@ -1,0 +1,74 @@
+{% extends 'base.html' %}
+
+{% block contents %}
+<style>
+.center{
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  grid-auto-rows: minmax(500px,auto);
+  grid-template-columns: repeat(4, 1fr);
+  
+  padding : 10px;
+}
+.search{
+  height: 50px;
+  width: 100px;
+  border: solid 2px orange;
+  border-radius: 8px;
+  color: black;
+  background-color: orange;
+}
+label{
+  font-size: 20px;
+}
+input[type="text"] { 
+  width: 800px;
+  height: 50px;
+  border: solid 2px #BDBDBD;
+  background-color: #BDBDBD;
+  border-radius: 8px; 
+  margin: 20px;
+  margin-right : 0px; 
+}
+
+</style>
+  <div style="text-align: center">
+    <br>
+    <h1 style="margin: 50px;">원하는 방을 찾아보세요 !</h1>
+    
+    <form method="post" >
+        {% csrf_token %}
+        {{ form.as_table }}
+        <input type="submit" value="찾아보기" class="search">
+    </form>
+  </div>
+    <br><br>
+    <div style="width:1080px; margin-left:20%;">
+    <section class='center'>
+    {% if object_list %}
+        {% for room in object_list %}
+        
+        <a href="{% url 'detail' room.id%}" style=" text-decoration:none ; color:#000000">
+            <div class="card-group" style="width:20rem">
+              <div class="card" style="height: 22rem; float : left; margin:15px;">
+                <div class="card-img">
+                  <img src="{{room.mainimg.url}}" class="card-img-top" alt="room">
+                </div>
+                <div class="card-body">
+                  <h5 class="card-title">{{room.title}}</h5>
+                  <p class="card-text">{{room.roomtype}} {{room.price}}</p>
+                  <p class="card-text"><small class="text-muted">✔죽전 단국대 ✔정문까지 5분 ✔풀옵션 ✔저렴한 원룸이예요~!</small></p>
+                </div>
+              </div>
+            </div>
+            </a>
+        {% endfor %}
+    {% elif search_term %}
+        <b><h6>검색 결과가 존재하지 않습니다.</h6></b>
+    {% endif %}
+    </div>
+
+</section>
+{% endblock %}
+    
