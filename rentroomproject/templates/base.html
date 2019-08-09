@@ -1,3 +1,4 @@
+{% load staticfiles %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -17,9 +18,13 @@
 }
 </style>
 <body>
-    <nav class="navbar navbar-light" style="position: absolute; right:0;">
+    
+             
+    <!-- <img src="{% static '1_logo.png' %}"> -->
+        
+        <nav class="navbar navbar-light" style="position: absolute; right:0;">
         <div class="a">
-        <a class="navbar-brand" href="{% url 'home' %}">RentRoom</a>
+        <!-- <a class="navbar-brand" href="{% url 'home' %}">RentRoom</a> -->
         </div>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -61,12 +66,18 @@
                 <a class="nav-link" href="{% url 'login' %}" tabindex="-1">로그인</a>
             </li>
             </ul>
-        </div>
+        
             {% endif %}
         <!-- </div> -->
     </nav>
+    </div>
     {% block contents %}
     {% endblock %}
 </body>
+<style>
+    
+
+</style>
 </html>
+
 

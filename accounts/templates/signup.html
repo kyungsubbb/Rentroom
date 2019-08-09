@@ -1,15 +1,28 @@
 {% extends 'base.html' %}
-
+{% load staticfiles %}
 {% block contents %}
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
 {% if error %}
 {{ error }}
 <br<br>
 {% endif %}
 
+
+
 <div class="container">
 <br><br><br><br><br><br><br>
-<h1>Sign up</h1><br>
+<img src="{% static '2_logo.png' %}">
+<!-- <h1>Sign up</h1><br> -->
 <div class="card" style="width: 18rem;">
     <div class="container">
     <form method="POST" action="{% url 'signup' %}">
@@ -29,6 +42,7 @@
     </div>
 </div>
 </div>
+</body>
 
 <style>
     .container{
@@ -41,7 +55,18 @@
         position: absolute;
         width: 100px;
         height: 16rem;
+        background: rgba(0, 0, 0, 0);
+        border:none;
         
     }
+    body{
+        background-image: url("{% static 'login_bg.png' %}")
+    }
+    .btn.btn-primary{
+        background-color:#f75710;
+        border:#f75710;
+    }
+
 </style>
 {% endblock %}
+</html>

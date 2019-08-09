@@ -1,36 +1,34 @@
-
 {% extends 'base.html' %}
-
+{% load staticfiles %}
 {% block contents %}
 
 {% if error %}
 {{ error }}
-<br><br>
+<br<br>
 {% endif %}
 
-<body>
 <div class="container">
 <br><br><br><br><br><br><br>
-<h1>Login</h1><br>
+<img src="{% static '2_logo.png' %}">
+<!-- <h1>Login</h1><br> -->
 <div class="card" style="width: 18rem;">
     <div class="container">
-    <form method="POST" action="{% url 'login' %}">
+    <form method="POST" action="{% url 'signup' %}">
         {% csrf_token %}
         <br>
         <input name="username" type="text" value="" placeholder="name">
         <br>
         <br>
-        <input name="password" type="password" value="" placeholder="password">
+        <input name="password1" type="password" value="" placeholder="password">
+
         <br>
         <br>
-        <input class="btn btn-primary" type="submit" value="Login">
+        <input class="btn btn-primary" type="submit" value="Sign Up!">
     </form>
     </div>
 </div>
 </div>
-</body>
-{% endblock %}
-{% load staticfiles %}
+
 <style>
     .container{
         position: relative;
@@ -41,10 +39,18 @@
     .card{
         position: absolute;
         width: 100px;
-        height: 13rem;
+        height: 16rem;
+        background: rgba(0, 0, 0, 0);
+        border:none;
         
     }
-    .body{
-        background-image: url("{% static '11.jpg' %}")
+    body{
+        background-image: url("{% static 'login_bg.png' %}")
     }
+    .btn.btn-primary{
+        background-color:#f75710;
+        border:#f75710;
+    }
+
 </style>
+{% endblock %}

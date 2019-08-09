@@ -64,8 +64,11 @@
   $(document).ready(function(){
 	  $('.backgroundTransition').backgroundTransition({
 		  backgrounds:[
-			  { src: "{% static '11.jpg' %}"},
-			  { src: "{% static '5.jpg' %}" }
+              { src: "{% static '11.jpg' %}" },
+			  { src: "{% static 'bg1.jpg' %}"},
+			  { src: "{% static 'bg2.jpg' %}" },
+              { src: "{% static 'bg3.jpg' %}" },
+              { src: "{% static 'bg4.jpg' %}" }
 		  ],
 		  transitionDelay: 3,
 		  animationSpeed: 800
