@@ -7,9 +7,11 @@ import accounts.views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', room.views.home, name="home"),
+    path('',room.views.first, name="first"),
+    path('room/home', room.views.home, name="home"),
     path('room/register/', room.views.register, name="register"),
     path('room/<int:room_id>', room.views.detail, name="detail"),
+    path('room/cart', room.views.cart, name="cart"),
     path('create', room.views.create, name="create"),
     path('accounts/signup', accounts.views.signup, name="signup"),
     path('accounts/login', accounts.views.login, name="login"),

@@ -2,6 +2,9 @@ from django.shortcuts import render, get_object_or_404,redirect
 from .models import Room
 from django.utils import timezone
 
+def first(request):
+    return render(request, 'first.html')
+
 def home(request):
     rooms = Room.objects
     return render(request, 'home.html', {'rooms':rooms})
@@ -29,3 +32,7 @@ def create(request):
     room.pub_date = timezone.datetime.now()
     room.save()
     return redirect('/room/' + str(room.id))
+
+def cart(request):
+    return render(request, 'cart.html')
+
