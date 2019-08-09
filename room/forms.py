@@ -12,7 +12,7 @@ class RoomPost(forms.ModelForm):
             'price' : forms.TextInput(attrs={'class':'form-control','placeholder':'가격을 입력하세요.'}),
             'start_date' : forms.TextInput(attrs={'class':'form-control','placeholder':'(ex: 2019-08-01)'}),
             'end_date' : forms.TextInput(attrs={'class':'form-control','placeholder':'(ex: 2019-08-31)'}),
-            'phonenumber' : forms.TextInput(attrs={'class':'form-control','placeholder':'(ex: 01012345678)'}),
+            'phonenumber' : forms.TextInput(attrs={'class':'form-control','placeholder':'(ex: 01012345678  "-"제외)'}),
             'description' : forms.TextInput(attrs={'class':'form-control','style': 'height: 300px','placeholder':'방에 대한 설명을 입력하세요.'}),
         }
 
@@ -29,3 +29,6 @@ class RoomPost(forms.ModelForm):
             'img2': '사진2',
             'img3': '사진3'
         }
+
+class PostSearchForm(forms.Form) :
+    search_word = forms.CharField(label = 'Search Word')
