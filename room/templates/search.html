@@ -1,5 +1,4 @@
 {% extends 'base.html' %}
-<<<<<<< HEAD
 {% load staticfiles %}
 {% block contents %}
 <style>
@@ -17,11 +16,6 @@ body:before {
     transform-origin: top left;
     filter: blur(2px);
 }
-=======
-
-{% block contents %}
-<style>
->>>>>>> 134c83ce8c0895bebd16f54ec13d3f1f39921512
 .center{
   display: grid;
   justify-content: center;
@@ -29,11 +23,7 @@ body:before {
   grid-auto-rows: minmax(500px,auto);
   grid-template-columns: repeat(4, 1fr);
   
-<<<<<<< HEAD
  
-=======
-  padding : 10px;
->>>>>>> 134c83ce8c0895bebd16f54ec13d3f1f39921512
 }
 .search{
   height: 50px;
@@ -44,11 +34,7 @@ body:before {
   background-color: orange;
 }
 label{
-<<<<<<< HEAD
   font-size: 0px;
-=======
-  font-size: 20px;
->>>>>>> 134c83ce8c0895bebd16f54ec13d3f1f39921512
 }
 input[type="text"] { 
   width: 800px;
@@ -59,7 +45,6 @@ input[type="text"] {
   margin: 20px;
   margin-right : 0px; 
 }
-<<<<<<< HEAD
 .box{
   height: 1000px;
   background-color : white;
@@ -77,20 +62,10 @@ input[type="text"] {
    
 
     <form method="post" style="margin-top:20px">
-=======
-
-</style>
-  <div style="text-align: center">
-    <br>
-    <h1 style="margin: 50px;">원하는 방을 찾아보세요 !</h1>
-    
-    <form method="post" >
->>>>>>> 134c83ce8c0895bebd16f54ec13d3f1f39921512
         {% csrf_token %}
         {{ form.as_table }}
         <input type="submit" value="찾아보기" class="search">
     </form>
-<<<<<<< HEAD
     
     <br><br>
     <div style="width:1080px; margin-left: -10%;">
@@ -102,15 +77,6 @@ input[type="text"] {
     {% if object_list %}
         {% for room in object_list %}
       
-=======
-  </div>
-    <br><br>
-    <div style="width:1080px; margin-left:20%;">
-    <section class='center'>
-    {% if object_list %}
-        {% for room in object_list %}
-        
->>>>>>> 134c83ce8c0895bebd16f54ec13d3f1f39921512
         <a href="{% url 'detail' room.id%}" style=" text-decoration:none ; color:#000000">
             <div class="card-group" style="width:20rem">
               <div class="card" style="height: 22rem; float : left; margin:15px;">
@@ -130,12 +96,8 @@ input[type="text"] {
         <b><h6>검색 결과가 존재하지 않습니다.</h6></b>
     {% endif %}
     </div>
-<<<<<<< HEAD
   </div>
 </div>
-=======
-
->>>>>>> 134c83ce8c0895bebd16f54ec13d3f1f39921512
 </section>
 {% endblock %}
     
