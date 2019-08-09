@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+      <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <title>당신을 위한 맞춤공간을 빌려드립니다.</title>
+      <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+      <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+      <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  </head>
+  <body>
+        {% load staticfiles %}
+      <div class="backgroundTransition">
+        <img src="{% static '1_logo.png' %}" style="padding:30px; position:absolute">
+        <div class="navbar transparent navbar-inverse">
+            
+            <nav class="navbar">
+                <ul class="navbar-nav" style="display: inline-block">
+                    <li class="nav-item active" style="display: inline-block">
+                        <a class="nav-link" href="{% url 'home' %}">Home &nbsp;&nbsp;&nbsp;&nbsp;|<span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item" style="display: inline-block">
+                        <a class="nav-link" href="#">&nbsp;&nbsp;&nbsp;&nbsp;Inroduce&nbsp;&nbsp;&nbsp;&nbsp;|</a>
+                    </li>
+                    <li class="nav-item" style="display: inline-block">
+                        <a class="nav-link" href="#">&nbsp;&nbsp;&nbsp;&nbsp;Service&nbsp;&nbsp;&nbsp;&nbsp;</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+        <div class="container" style="max-width: 2000px;">
+            <br><br><br><br><br><br><br><br><br><br><br>
+            <!-- <p id="text"><span id="rent">Rent</span> a GOOD Room<br>It's like walk in the park
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; -->
+                <img src="{% static '1_maintext.png' %}">
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <a href="{% url 'signup' %}"><img src="{% static '1_login.png' %}"></a></p>
+            <!-- <p id="name"><I>with Vacancy Rent</I></p> -->
+        </div>
+      </div>
+
+<script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+
+
+<script type="text/javascript">
+  $(document).ready(function(){
+	  $('.backgroundTransition').backgroundTransition({
+		  backgrounds:[
+<<<<<<< HEAD
+			  { src: "{% static '11.jpg' %}"},
+			  { src: "{% static '5.jpg' %}" }
+=======
+              { src: "{% static '11.jpg' %}" },
+			  { src: "{% static 'bg1.jpg' %}"},
+			  { src: "{% static 'bg2.jpg' %}" },
+              { src: "{% static 'bg3.jpg' %}" },
+              { src: "{% static 'bg4.jpg' %}" }
+>>>>>>> 134c83ce8c0895bebd16f54ec13d3f1f39921512
+		  ],
+		  transitionDelay: 3,
+		  animationSpeed: 800
+	  });
+  });
+</script>
+</body>
+<script>
+    /*
+ * Simple jQuery plugin to synchronously load and then transition (fade-in/out) a list of images as full screen background-images on a web page.
+ * Author: Matt Richards, http://github.com/mattyrichards
+ * Licensed under the MIT license
+ */
+;(function( $, window, document, undefined ){
+
+var BackgroundTransition = function( elem, options ){
+    this.elem = elem;
+    this.$elem = $(elem);
+    this.options = options;
+    self = this;
+};
+
+BackgroundTransition.prototype = {
+    defaults: {
+        classNameBottomImage: "image-bottom",
+        classNameTopImage: "image-top",
+        idNameDownloadImage: "image-download",
+        backgrounds: [],
+        imageKey: 1,
+        transitionDelay: 10,
+        animationSpeed: 1000
+    },
+
+    init: function() {
+        this.config = $.extend({}, this.defaults, this.options);
+        if (this.config.backgrounds.length >= 2) {
+            this.prepareMarkup();
+            this.loadNext();
+            return this;
+        } else {
+            console.warn('BackgroundTransition requires at least 2 background images.')
+            return false;
+        }
+    },
+
+    prepareMarkup: function() {
+        var imageBottom = $("<div/>").addClass(this.config.classNameBottomImage + ' initial').css('background-image', 'url(' + this.config.backgrounds[0].src + ')');
+        var imageTop = $("<div/>").addClass(this.config.classNameTopImage).css('display', 'none');
+        $(this.elem)
+            .prepend(imageBottom, imageTop)
+            .css('background-image', 'none');
+    },
+
+    loadNext: function() {
+        if (this.config.imageKey == this.config.backgrounds.length){
+            this.config.imageKey = 0;
+        }
+        var deferred = $.Deferred();
+        $('<img/>').attr('id', this.config.idNameDownloadImage).load(function() {
+            deferred.resolve();
+        }).attr('src', this.config.backgrounds[this.config.imageKey].src).prependTo('body .backgroundTransition');
+        deferred.done(function() {
+            setTimeout(self.replaceImage, (self.config.transitionDelay * 1000));
+        });
+    },
+
+    replaceImage: function() {
+        var nextSrc = $('#' + self.config.idNameDownloadImage);
+        $('#' + self.config.idNameDownloadImage).remove();
+        $('.' + self.config.classNameTopImage).css('background-image', 'url(' + nextSrc.attr('src') + ')');
+        $('.' + self.config.classNameTopImage).fadeIn(self.config.animationSpeed, 'swing', function() {
+           $('.' + self.config.classNameBottomImage).css('background-image', 'url(' + nextSrc.attr('src') + ')');
+           $(this).hide();
+           self.config.imageKey++;
+           self.loadNext();
+        });
+    }
+}
+
+BackgroundTransition.defaults = BackgroundTransition.prototype.defaults;
+
+$.fn.backgroundTransition = function(options) {
+    return this.each(function() {
+        new BackgroundTransition(this, options).init();
+    });
+};
+
+})( jQuery, window , document );
+</script>
+<style>
+    .navbar{
+        float:right;
+    }
+    
+    .nav-link{
+        color: white;
+    }
+    .nav-link:hover{
+        color: white;
+    }
+    .navbar.transparent.navbar-inverse .navbar {
+        border-width: 0px;
+        -webkit-box-shadow: 0px 0px;
+        box-shadow: 0px 0px;
+        background-color: rgba(0,0,0,0.0);
+    }
+    body{
+        background-image: url("{% static '11.jpg' %}")
+    }
+
+    #text{
+        font-size: 4rem;
+        color:white;
+        font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    }
+
+    #name{
+        font-size: 2.5rem;
+        color:white;
+        font-family:Georgia, 'Times New Roman', Times, serif;
+    }
+
+    #rent{
+        color:darkorange;
+    }
+    
+    html, body, .backgroundTransition, .backgroundTransition .image-top, .backgroundTransition .image-bottom {
+    height: 100%;
+    width: 100%;
+    }
+
+    body { margin: 0; }
+
+    body .backgroundTransition {
+    position: relative;
+    overflow: hidden;
+    background-size: cover;
+    }
+
+    body .backgroundTransition .image-bottom, body .backgroundTransition .image-top {
+    position: absolute;
+    left: 0;
+    top: 0;
+    background-size: cover;
+    }
+
+    body .backgroundTransition .image-bottom { z-index: -2; }
+
+    body .backgroundTransition .image-top {
+    z-index: -1;
+    display: none;
+    }
+
+    #image-download { display: none; }
+
+    /*
+    Add an initial background-image to .backgroundTransition container. This image
+    should match the first image passed into the plugin's 'background' array.
+    Adding this here ensures that there is a background image loaded on page load,
+    while waiting for document.ready().
+    */
+    .backgroundTransition {
+    background-image: url('https://unsplash.it/1920/1400?image=933');
+    }
+
+    /*
+    The following css is merely to style the white container in the middle of the page.
+    */
+    .content {
+        margin-top: 50px;
+        width: 728px;
+        margin-left: auto;
+        margin-right: auto;
+        padding: 20px;
+        background-color: rgba(0,0,0,.3);
+        color:#fff;
+    }
+
+</style>
+</html>

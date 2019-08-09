@@ -1,0 +1,192 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>당신을 위한 맞춤공간을 빌려드립니다.</title>
+    <link href="https://fonts.googleapis.com/css?family=Do+Hyeon|Quicksand|Red+Hat+Display|Roboto&display=swap" rel="stylesheet">
+  </head>
+{% block contents %}
+<style>
+body{
+  font-family: 'Quicksand', sans-serif;
+  font-family: 'Red Hat Display', sans-serif;
+  font-family: 'Roboto', sans-serif;
+  font-family: 'Do Hyeon', sans-serif;
+}
+.center{
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  grid-auto-rows: minmax(400px,auto);
+  grid-template-columns: repeat(4, 1fr);
+  
+  padding : 0px;
+}
+.search_bar{
+  height: 50px;
+  width: 800px;
+  border: 1px solid #a8a8a8;
+  background : #ffffff;
+  
+}
+.text{
+  font-size : 16px;
+  width: 500px;
+  padding: 10px;
+  border: 0px;
+  outline: none;
+  float: left;
+}
+.button{
+  width: 100px;
+  height: 100%;
+  background-color: rgb(255, 166, 0);
+  border: 0px;
+  outline: none;
+  float: right;
+  color : #ffffff;
+}
+.card{
+    float: left;
+    width: 400px;
+    height: 600px;
+    padding-left: 10px;
+    padding-right: 10px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+   
+    
+  }
+ 
+  .card figure{
+  display: inline-block;
+  height: 650px;
+  border: 1px solid rgba(0,0,0,0.2);
+  margin:0;
+  margin-bottom: 15px;
+  margin-top: 15px;
+  padding:10px;
+  box-shadow: 2px 2px 5px rgba(0,0,0,0.5);
+}
+.card figure img{
+ width : 350px;
+ height : 350px;
+}
+input:-ms-input-placeholder{color : #a8a8a8;}
+input::-webkit-input-placeholder {color : #a8a8a8;}
+input::-moz-placeholder{color:#a8a8a8;}
+.logo{
+  overflow: hidden;
+
+  text-shadow:  5px 5px 5px grey;
+  position: relative;
+  z-index: -1;
+}
+.img{
+  position: relative;
+                                                             
+  height: 100vh;
+  
+  max-height: initial;
+  margin-top: -7%;
+  margin-bottom: -7%
+  
+}
+.text-a{
+  position: absolute;
+  top: 350px;
+  left: 450px;
+  width: 100%;
+  margin: 0 auto;
+  font-size: 80px;
+  color : white;
+  font-family: 'Quicksand', sans-serif;
+  font-family: 'Red Hat Display', sans-serif;
+  font-family: 'Roboto', sans-serif;
+  font-family: 'Do Hyeon', sans-serif
+}
+.img-cover{
+   position: absolute;
+   height: 100%;
+   width: 100%;
+   background-color: rgba(0, 0, 0, 0.4);                                                                 
+   z-index:1;
+}
+.img .content{
+     position: absolute;
+     top:50%;
+     left:50%;
+     transform: translate(-50%, -50%);                                                                   
+     font-size:5rem;
+     color: white;
+     z-index: 2;
+     text-align: center;
+}
+
+</style>
+
+<body>
+
+  <div class='logo'>
+    <div class='img'>
+      <img src="{% static 'home.jpg' %}" alt="">
+        <div class="text-a">
+        <i><h1 style="font-size : 120%">Most loved room <strong>today</strong></h1></i>
+      </div>
+    </div>
+  </div>
+
+
+  <!--<div class="logo">
+    <div class="img">
+        <div class="content">
+            <img src="{% static 'home.jpg'%}">
+            <i><h1 style="font-size: 80%">Most loved room <strong style="font-size: 120%">today</strong></h1></i>
+            
+        </div>
+        <div class="img-cover"></div>
+    </div>
+  </div> 
+  <div style="margin : 100px"></div>-->
+  <h3 style="padding-left : 20%; margin-bottom: 0px; margin-top: 0px; " >현재 등록된 방을 보여드릴게요 !</h3>
+<br>
+
+<div style="width:1080px; margin-left:20%;">
+  <section class='center'>
+
+
+      {% for room in rooms.all %}
+      <a href="{% url 'detail' room.id%}" style=" text-decoration:none ; color:#000000">
+      <div class="card-group" style="width:20rem">
+        <div class="card" style="height: 22rem; float : left; margin:15px;">
+          <div class="card-img">
+            <img src="{{room.mainimg.url}}" class="card-img-top" alt="room">
+          </div>
+          <div class="card-body">
+            <div style="float: left;"> 
+            <h5 class="card-title">{{room.title}}</h5>
+            <p class="card-text">{{room.roomtype}} {{room.price}}</p>
+          </div>
+          <div >
+            <img src="{% static '5_별점.png'%}" style="float:right;">
+          </div>
+            <div style="margin-top: 90px;">
+            <p class="card-text"><small class="text-muted">✔죽전 단국대 ✔정문까지 5분 ✔풀옵션 ✔저렴한 원룸이예요~!</small></p>
+          </div>
+          </div>
+        </div>
+      </div>
+      </a>
+      {% endfor %}
+    </section>
+  </div>     
+  
+{% endblock %}
+</body>

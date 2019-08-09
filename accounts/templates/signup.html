@@ -1,0 +1,47 @@
+{% extends 'base.html' %}
+
+{% block contents %}
+
+{% if error %}
+{{ error }}
+<br<br>
+{% endif %}
+
+<div class="container">
+<br><br><br><br><br><br><br>
+<h1>Sign up</h1><br>
+<div class="card" style="width: 18rem;">
+    <div class="container">
+    <form method="POST" action="{% url 'signup' %}">
+        {% csrf_token %}
+        <br>
+        <input name="username" type="text" value="" placeholder="name">
+        <br>
+        <br>
+        <input name="password1" type="password" value="" placeholder="password">
+        <br>
+        <br>
+        <input name="password2" type="password" value="" placeholder="confirm password">
+        <br>
+        <br>
+        <input class="btn btn-primary" type="submit" value="Sign Up!">
+    </form>
+    </div>
+</div>
+</div>
+
+<style>
+    .container{
+        position: relative;
+        width: 300px;
+        height: 200px;
+        text-align: center;
+    }
+    .card{
+        position: absolute;
+        width: 100px;
+        height: 16rem;
+        
+    }
+</style>
+{% endblock %}
