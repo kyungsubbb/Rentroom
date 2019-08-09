@@ -1,16 +1,10 @@
-<<<<<<< HEAD
 
 {% extends 'base.html' %}
 
-=======
-{% extends 'base.html' %}
-{% load staticfiles %}
->>>>>>> 134c83ce8c0895bebd16f54ec13d3f1f39921512
 {% block contents %}
 
 {% if error %}
 {{ error }}
-<<<<<<< HEAD
 <br><br>
 {% endif %}
 
@@ -21,46 +15,22 @@
 <div class="card" style="width: 18rem;">
     <div class="container">
     <form method="POST" action="{% url 'login' %}">
-=======
-<br<br>
-{% endif %}
-
-<div class="container">
-<br><br><br><br><br><br><br>
-<img src="{% static '2_logo.png' %}">
-<!-- <h1>Login</h1><br> -->
-<div class="card" style="width: 18rem;">
-    <div class="container">
-    <form method="POST" action="{% url 'signup' %}">
->>>>>>> 134c83ce8c0895bebd16f54ec13d3f1f39921512
         {% csrf_token %}
         <br>
         <input name="username" type="text" value="" placeholder="name">
         <br>
         <br>
-<<<<<<< HEAD
         <input name="password" type="password" value="" placeholder="password">
         <br>
         <br>
         <input class="btn btn-primary" type="submit" value="Login">
-=======
-        <input name="password1" type="password" value="" placeholder="password">
-
-        <br>
-        <br>
-        <input class="btn btn-primary" type="submit" value="Sign Up!">
->>>>>>> 134c83ce8c0895bebd16f54ec13d3f1f39921512
     </form>
     </div>
 </div>
 </div>
-<<<<<<< HEAD
 </body>
 {% endblock %}
 {% load staticfiles %}
-=======
-
->>>>>>> 134c83ce8c0895bebd16f54ec13d3f1f39921512
 <style>
     .container{
         position: relative;
@@ -71,7 +41,6 @@
     .card{
         position: absolute;
         width: 100px;
-<<<<<<< HEAD
         height: 13rem;
         
         
@@ -80,20 +49,3 @@
         background-image: url("{% static '11.jpg' %}")
     }
 </style>
-=======
-        height: 16rem;
-        background: rgba(0, 0, 0, 0);
-        border:none;
-        
-    }
-    body{
-        background-image: url("{% static 'login_bg.png' %}")
-    }
-    .btn.btn-primary{
-        background-color:#f75710;
-        border:#f75710;
-    }
-
-</style>
-{% endblock %}
->>>>>>> 134c83ce8c0895bebd16f54ec13d3f1f39921512
