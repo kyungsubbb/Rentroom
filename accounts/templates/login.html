@@ -1,3 +1,4 @@
+<body>
 {% extends 'base.html' %}
 
 {% block contents %}
@@ -26,7 +27,9 @@
     </div>
 </div>
 </div>
-
+{% endblock %}
+</body>
+{% load staticfiles %}
 <style>
     .container{
         position: relative;
@@ -40,5 +43,7 @@
         height: 13rem;
         
     }
+    .body{
+        background-image: url("{% static '11.jpg' %}")
+    }
 </style>
-{% endblock %}

@@ -36,11 +36,6 @@ def create(request):
     room.save()
     return redirect('/room/' + str(room.id))
 
-<<<<<<< HEAD
-def cart(request):
-    return render(request, 'cart.html')
-
-=======
 def roompost(request):
     if request.method == 'POST':
         form = RoomPost(request.POST, request.FILES)
@@ -75,4 +70,3 @@ class SearchFormView(FormView):
         context['object_list'] = post_list
 
         return render(self.request, self.template_name, context)
->>>>>>> 5449369c2ac6500fbcf0e7e5b004cf93153ab9be
