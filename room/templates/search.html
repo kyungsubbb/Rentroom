@@ -1,17 +1,9 @@
 {% extends 'base.html' %}
 
 {% block contents %}
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<div id="content">
+
+<section class="center">
+    <div id="content">
     <h1>Search</h1>
 
     <form method="post">
@@ -31,8 +23,8 @@
     {% elif search_term %}
         <b><h6>검색 결과가 존재하지 않습니다.</h6></b>
     {% endif %}
-</div>
+    </div>
 
-
+</section>
 {% endblock %}
     

@@ -85,21 +85,16 @@ input::-moz-placeholder{color:#a8a8a8;}
 
 {% block contents %}
 <div class = "logo">
-  <br>
-  <br>
-  <br>
-  <img src="{% static 'rentroom.jpg' %}" alt="rentroom">
-  <br>
-  <div class="search_bar">
-    <input class="text" type="text" placeholder="검색어를 입력해주세요.">
-    <button class="button">찾아보기</button>
-</div>
+  
+  <img src="./static/방1.jpg" alt="">
 </div>
 <br>
 <br><hr>
 <br>
 
 <h3 style='text-align : center'>당신이 원하는 방을 찾아보세요 !</h3><br>
+
+<div style="width:1080px; margin-left:20%;">
 <section class='center'>
     <!-- {%for room in rooms.all %}
     <a href="{% url 'detail' room.id%}">
@@ -122,7 +117,7 @@ input::-moz-placeholder{color:#a8a8a8;}
     {% for room in rooms.all %}
     <a href="{% url 'detail' room.id%}" style=" text-decoration:none ; color:#000000">
     <div class="card-group" style="width:20rem">
-      <div class="card" style="height: 22rem">
+      <div class="card" style="height: 22rem; float : left; margin:15px;">
         <div class="card-img">
           <img src="{{room.mainimg.url}}" class="card-img-top" alt="room">
         </div>
@@ -135,6 +130,6 @@ input::-moz-placeholder{color:#a8a8a8;}
     </div>
     </a>
     {% endfor %}
-         
+  </div>     
 {% endblock %}
 </body>
