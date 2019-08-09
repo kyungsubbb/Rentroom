@@ -443,10 +443,15 @@ select {
 select[multiple] {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
     /* Allow HTML size attribute to override the height in the rule above. */
     height: auto;
 >>>>>>> dacd6c24a3172085053810ea16d8bf730b721346
+=======
+    /* Allow HTML size attribute to override the height in the rule above. */
+    height: auto;
+>>>>>>> 134c83ce8c0895bebd16f54ec13d3f1f39921512
 =======
     /* Allow HTML size attribute to override the height in the rule above. */
     height: auto;
@@ -839,11 +844,14 @@ table#change-history tbody th {
     width: auto;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     height: 40px;
     padding: 10px 40px;
     background: #417690;
     line-height: 40px;
 =======
+=======
+>>>>>>> 134c83ce8c0895bebd16f54ec13d3f1f39921512
 =======
 >>>>>>> 134c83ce8c0895bebd16f54ec13d3f1f39921512
     height: auto;
@@ -853,7 +861,10 @@ table#change-history tbody th {
     padding: 10px 40px;
     background: #417690;
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> dacd6c24a3172085053810ea16d8bf730b721346
+=======
+>>>>>>> 134c83ce8c0895bebd16f54ec13d3f1f39921512
 =======
 >>>>>>> 134c83ce8c0895bebd16f54ec13d3f1f39921512
     color: #ffc;

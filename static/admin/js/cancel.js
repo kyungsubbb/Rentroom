@@ -6,10 +6,14 @@
             if (window.location.search.indexOf('&_popup=1') === -1) {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
                 window.history.back();  // Go back if not a popup.
 =======
                 window.history.back(); // Go back if not a popup.
 >>>>>>> dacd6c24a3172085053810ea16d8bf730b721346
+=======
+                window.history.back(); // Go back if not a popup.
+>>>>>>> 134c83ce8c0895bebd16f54ec13d3f1f39921512
 =======
                 window.history.back(); // Go back if not a popup.
 >>>>>>> 134c83ce8c0895bebd16f54ec13d3f1f39921512

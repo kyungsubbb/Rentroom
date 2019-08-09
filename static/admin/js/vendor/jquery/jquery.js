@@ -263,6 +263,7 @@ jQuery.extend = jQuery.fn.extend = function() {
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 				// Prevent never-ending loop
 				if ( target === copy ) {
 =======
@@ -270,6 +271,11 @@ jQuery.extend = jQuery.fn.extend = function() {
 				// Prevent never-ending loop
 				if ( name === "__proto__" || target === copy ) {
 >>>>>>> dacd6c24a3172085053810ea16d8bf730b721346
+=======
+				// Prevent Object.prototype pollution
+				// Prevent never-ending loop
+				if ( name === "__proto__" || target === copy ) {
+>>>>>>> 134c83ce8c0895bebd16f54ec13d3f1f39921512
 =======
 				// Prevent Object.prototype pollution
 				// Prevent never-ending loop

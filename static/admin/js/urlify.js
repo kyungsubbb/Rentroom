@@ -130,10 +130,14 @@
         'Initialize': function() {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
             if (Downcoder.map) {  // already made
 =======
             if (Downcoder.map) { // already made
 >>>>>>> dacd6c24a3172085053810ea16d8bf730b721346
+=======
+            if (Downcoder.map) { // already made
+>>>>>>> 134c83ce8c0895bebd16f54ec13d3f1f39921512
 =======
             if (Downcoder.map) { // already made
 >>>>>>> 134c83ce8c0895bebd16f54ec13d3f1f39921512
@@ -193,6 +197,7 @@
         } else {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
             s = s.replace(/[^-\w\s]/g, '');  // remove unneeded chars
         }
         s = s.replace(/^\s+|\s+$/g, '');   // trim leading/trailing spaces
@@ -203,6 +208,8 @@
 =======
 =======
 >>>>>>> 134c83ce8c0895bebd16f54ec13d3f1f39921512
+=======
+>>>>>>> 134c83ce8c0895bebd16f54ec13d3f1f39921512
             s = s.replace(/[^-\w\s]/g, ''); // remove unneeded chars
         }
         s = s.replace(/^\s+|\s+$/g, ''); // trim leading/trailing spaces
@@ -211,7 +218,10 @@
         s = s.replace(/-+$/g, ''); // trim any trailing hyphens
         return s.toLowerCase(); // convert to lowercase
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> dacd6c24a3172085053810ea16d8bf730b721346
+=======
+>>>>>>> 134c83ce8c0895bebd16f54ec13d3f1f39921512
 =======
 >>>>>>> 134c83ce8c0895bebd16f54ec13d3f1f39921512
     }

@@ -1,6 +1,7 @@
 /*global gettext*/
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 (function($) {
     'use strict';
     $(document).ready(function() {
@@ -27,6 +28,8 @@
     });
 })(django.jQuery);
 =======
+=======
+>>>>>>> 134c83ce8c0895bebd16f54ec13d3f1f39921512
 =======
 >>>>>>> 134c83ce8c0895bebd16f54ec13d3f1f39921512
 (function() {
@@ -84,6 +87,9 @@
     });
 })();
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> dacd6c24a3172085053810ea16d8bf730b721346
+=======
+>>>>>>> 134c83ce8c0895bebd16f54ec13d3f1f39921512
 =======
 >>>>>>> 134c83ce8c0895bebd16f54ec13d3f1f39921512

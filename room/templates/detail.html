@@ -23,8 +23,11 @@
 
 </head>
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
+=======
+>>>>>>> 134c83ce8c0895bebd16f54ec13d3f1f39921512
 <style>
 .carousel-inner{
   overflow: hidden;
@@ -35,6 +38,9 @@
 
 }
 </style>
+<<<<<<< HEAD
+>>>>>>> 134c83ce8c0895bebd16f54ec13d3f1f39921512
+=======
 >>>>>>> 134c83ce8c0895bebd16f54ec13d3f1f39921512
 
 
@@ -83,36 +89,51 @@
       <p>가능한 날짜 : {{room.start_date}} ~ {{room.end_date}}</p>
       <p>연락처 : {{room.phonenumber}}</p>
       <p>특징 : {{room.description}}</p>
+<<<<<<< HEAD
       <p>도로명주소 : {{room.sample5_address}}</p>
+=======
+>>>>>>> 134c83ce8c0895bebd16f54ec13d3f1f39921512
     </div>
 
     <div id="map" style="width:400px;height:400px;"></div>
 
     <script>
+<<<<<<< HEAD
       const {Ga, Ha} = JSON.parse(localStorage.getItem('coords'))
       console.log(Ga, Ha)
       var mapOptions = {
         center: new naver.maps.LatLng(Ha, Ga),
+=======
+      var mapOptions = {
+        center: new naver.maps.LatLng(37.3595704, 127.105399),
+>>>>>>> 134c83ce8c0895bebd16f54ec13d3f1f39921512
         zoom: 10}
       ;
 
       var map = new naver.maps.Map('map', mapOptions);
+<<<<<<< HEAD
       localStorage.removeItem('coords');
     </script>
       
     </div>
 
+=======
+    </script>
+>>>>>>> 134c83ce8c0895bebd16f54ec13d3f1f39921512
     <br><br>
 
     <button type = "button" class="btn btn-outline-dark"><a href = "{% url 'home'%}">홈으로 돌아가기</a></button>
     <br><br><br>
   </div>
 
+<<<<<<< HEAD
   <svg version="1.1" xmlns="http://www.w3.org/2000/svg">
     <filter id="blur">
       <feGaussianBlur stdDeviation="6" />
     </filter>
   </svg>
 
+=======
+>>>>>>> 134c83ce8c0895bebd16f54ec13d3f1f39921512
 </body>
 {% endblock %}

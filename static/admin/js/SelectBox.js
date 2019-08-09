@@ -21,10 +21,14 @@
             $(box).empty(); // clear all options
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
             var new_options = box.outerHTML.slice(0, -9);  // grab just the opening tag
 =======
             var new_options = box.outerHTML.slice(0, -9); // grab just the opening tag
 >>>>>>> dacd6c24a3172085053810ea16d8bf730b721346
+=======
+            var new_options = box.outerHTML.slice(0, -9); // grab just the opening tag
+>>>>>>> 134c83ce8c0895bebd16f54ec13d3f1f39921512
 =======
             var new_options = box.outerHTML.slice(0, -9); // grab just the opening tag
 >>>>>>> 134c83ce8c0895bebd16f54ec13d3f1f39921512
@@ -58,10 +62,14 @@
                         node.displayed = 0;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
                         break;  // Once the first token isn't found we're done
 =======
                         break; // Once the first token isn't found we're done
 >>>>>>> dacd6c24a3172085053810ea16d8bf730b721346
+=======
+                        break; // Once the first token isn't found we're done
+>>>>>>> 134c83ce8c0895bebd16f54ec13d3f1f39921512
 =======
                         break; // Once the first token isn't found we're done
 >>>>>>> 134c83ce8c0895bebd16f54ec13d3f1f39921512

@@ -168,6 +168,7 @@ Requires jQuery, core.js, and SelectBox.js.
                 var j_to_box = $('#' + field_id + '_to');
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
                 var resize_filters = function() { j_to_box.height($(filter_p).outerHeight() + j_from_box.outerHeight()); };
                 if (j_from_box.outerHeight() > 0) {
                     resize_filters(); // This fieldset is already open. Resize now.
@@ -178,6 +179,9 @@ Requires jQuery, core.js, and SelectBox.js.
 =======
                 j_to_box.height($(filter_p).outerHeight() + j_from_box.outerHeight());
 >>>>>>> dacd6c24a3172085053810ea16d8bf730b721346
+=======
+                j_to_box.height($(filter_p).outerHeight() + j_from_box.outerHeight());
+>>>>>>> 134c83ce8c0895bebd16f54ec13d3f1f39921512
 =======
                 j_to_box.height($(filter_p).outerHeight() + j_from_box.outerHeight());
 >>>>>>> 134c83ce8c0895bebd16f54ec13d3f1f39921512

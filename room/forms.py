@@ -7,7 +7,11 @@ class RoomPost(forms.ModelForm):
         fields = ['title', 'roomtype', 'price', 'start_date', 'end_date', 'phonenumber', 'description', 'mainimg', 'img1', 'img2', 'img3']
         
         widgets = {
+<<<<<<< HEAD
             'title' : forms.TextInput(attrs={'class':'form-control','placeholder':'(ex:깨끗한 집)'}),
+=======
+            'title' : forms.TextInput(attrs={'class':'form-control','placeholder':'제목을 입력하세요.'}),
+>>>>>>> 134c83ce8c0895bebd16f54ec13d3f1f39921512
             'roomtype' : forms.Select(attrs={'class':'form-control', 'placeholder':'(ex:원룸/투룸/아파트/고시텔/오피스텔)'}),
             'price' : forms.TextInput(attrs={'class':'form-control','placeholder':'가격을 입력하세요.'}),
             'start_date' : forms.TextInput(attrs={'class':'form-control','placeholder':'(ex: 2019-08-01)'}),
@@ -31,4 +35,8 @@ class RoomPost(forms.ModelForm):
         }
 
 class PostSearchForm(forms.Form) :
+<<<<<<< HEAD
     search_word = forms.CharField(label = '검색어를 입력하세요')
+=======
+    search_word = forms.CharField(label = 'Search Word')
+>>>>>>> 134c83ce8c0895bebd16f54ec13d3f1f39921512

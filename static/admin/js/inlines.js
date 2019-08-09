@@ -65,12 +65,17 @@
                 row.removeClass(options.emptyCssClass)
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
                 .addClass(options.formCssClass)
                 .attr("id", options.prefix + "-" + nextIndex);
 =======
                     .addClass(options.formCssClass)
                     .attr("id", options.prefix + "-" + nextIndex);
 >>>>>>> dacd6c24a3172085053810ea16d8bf730b721346
+=======
+                    .addClass(options.formCssClass)
+                    .attr("id", options.prefix + "-" + nextIndex);
+>>>>>>> 134c83ce8c0895bebd16f54ec13d3f1f39921512
 =======
                     .addClass(options.formCssClass)
                     .attr("id", options.prefix + "-" + nextIndex);
@@ -143,6 +148,7 @@
     $.fn.formset.defaults = {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
         prefix: "form",          // The form prefix for your django formset
         addText: "add another",      // Text for the add link
         deleteText: "remove",      // Text for the delete link
@@ -156,6 +162,8 @@
 =======
 =======
 >>>>>>> 134c83ce8c0895bebd16f54ec13d3f1f39921512
+=======
+>>>>>>> 134c83ce8c0895bebd16f54ec13d3f1f39921512
         prefix: "form", // The form prefix for your django formset
         addText: "add another", // Text for the add link
         deleteText: "remove", // Text for the delete link
@@ -167,7 +175,10 @@
         removed: null, // Function called each time a form is deleted
         addButton: null // Existing add button to use
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> dacd6c24a3172085053810ea16d8bf730b721346
+=======
+>>>>>>> 134c83ce8c0895bebd16f54ec13d3f1f39921512
 =======
 >>>>>>> 134c83ce8c0895bebd16f54ec13d3f1f39921512
     };
@@ -180,12 +191,17 @@
             $(selector).not(".add-row").removeClass("row1 row2")
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
             .filter(":even").addClass("row1").end()
             .filter(":odd").addClass("row2");
 =======
                 .filter(":even").addClass("row1").end()
                 .filter(":odd").addClass("row2");
 >>>>>>> dacd6c24a3172085053810ea16d8bf730b721346
+=======
+                .filter(":even").addClass("row1").end()
+                .filter(":odd").addClass("row2");
+>>>>>>> 134c83ce8c0895bebd16f54ec13d3f1f39921512
 =======
                 .filter(":even").addClass("row1").end()
                 .filter(":odd").addClass("row2");

@@ -10,6 +10,7 @@
         var showQuestion = function() {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
             $(options.acrossClears).hide();
             $(options.acrossQuestions).show();
             $(options.allContainer).hide();
@@ -66,6 +67,8 @@
 =======
 =======
 >>>>>>> 134c83ce8c0895bebd16f54ec13d3f1f39921512
+=======
+>>>>>>> 134c83ce8c0895bebd16f54ec13d3f1f39921512
                 $(options.acrossClears).hide();
                 $(options.acrossQuestions).show();
                 $(options.allContainer).hide();
@@ -120,7 +123,10 @@
                 });
             };
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> dacd6c24a3172085053810ea16d8bf730b721346
+=======
+>>>>>>> 134c83ce8c0895bebd16f54ec13d3f1f39921512
 =======
 >>>>>>> 134c83ce8c0895bebd16f54ec13d3f1f39921512
         // Show counter by default

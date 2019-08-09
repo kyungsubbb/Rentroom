@@ -1,6 +1,10 @@
 {% extends 'base.html' %}
 {% load staticfiles %}
 
+<<<<<<< HEAD
+=======
+{% block contents %}
+>>>>>>> 134c83ce8c0895bebd16f54ec13d3f1f39921512
 
 <!DOCTYPE html>
 <html lang="en">
@@ -9,6 +13,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>당신을 위한 맞춤공간을 빌려드립니다.</title>
+<<<<<<< HEAD
     <link href="https://fonts.googleapis.com/css?family=Do+Hyeon|Quicksand|Red+Hat+Display|Roboto&display=swap" rel="stylesheet">
   </head>
 {% block contents %}
@@ -190,3 +195,62 @@ input::-moz-placeholder{color:#a8a8a8;}
   
 {% endblock %}
 </body>
+=======
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+</head>
+<body>
+
+<br><br>
+<br>
+<br>
+<br>
+
+<h3 style='text-align : center'>당신이 원하는 방을 찾아보세요 !</h3><br>
+
+<div style="width:1080px; margin-left:20%;">
+<section class='center'>
+    <div class="container">
+    {% for room in rooms.all %}
+    <a href="{% url 'detail' room.id%}" style=" text-decoration:none ; color:#000000">
+    <div class="card-group" style="width:20rem">
+      <div class="card" style="height: 22rem; float : left; margin:15px;">
+        <div class="card-img">
+          <img src="{{room.mainimg.url}}" class="card-img-top" alt="room">
+        </div>
+        <div class="card-body">
+          <h5 class="card-title">{{room.title}}</h5>
+          <p class="card-text">{{room.roomtype}} {{room.price}}</p>
+          <p class="card-text"><small class="text-muted">✔죽전 단국대 ✔정문까지 5분 ✔풀옵션 ✔저렴한 원룸이예요~!</small></p>
+        </div>
+      </div>
+    </div>
+    <!-- <div class="card">
+      <img src="{{room.mainimg.url}}" alt="Avatar" style="width:10%">
+      <div class="container">
+        <h4><b>{{room.title}}</b></h4> 
+        <p>{{room.roomtype}} {{room.price}}</p> 
+      </div>
+    </div> -->
+    </a>
+    {% endfor %}
+    </div>
+
+         
+{% endblock %}
+</body>
+<style>
+  .card {
+  transition: 0.3s;
+  width: 15rem;
+}
+
+.card:hover {
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+
+.container {
+  padding: 2px 16px;
+}
+</style>
+    
+>>>>>>> 134c83ce8c0895bebd16f54ec13d3f1f39921512

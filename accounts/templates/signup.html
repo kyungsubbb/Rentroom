@@ -1,15 +1,40 @@
 {% extends 'base.html' %}
+<<<<<<< HEAD
 
 {% block contents %}
 
+=======
+{% load staticfiles %}
+{% block contents %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+>>>>>>> 134c83ce8c0895bebd16f54ec13d3f1f39921512
 {% if error %}
 {{ error }}
 <br<br>
 {% endif %}
 
+<<<<<<< HEAD
 <div class="container">
 <br><br><br><br><br><br><br>
 <h1>Sign up</h1><br>
+=======
+
+
+<div class="container">
+<br><br><br><br><br><br><br>
+<img src="{% static '2_logo.png' %}">
+<!-- <h1>Sign up</h1><br> -->
+>>>>>>> 134c83ce8c0895bebd16f54ec13d3f1f39921512
 <div class="card" style="width: 18rem;">
     <div class="container">
     <form method="POST" action="{% url 'signup' %}">
@@ -29,6 +54,10 @@
     </div>
 </div>
 </div>
+<<<<<<< HEAD
+=======
+</body>
+>>>>>>> 134c83ce8c0895bebd16f54ec13d3f1f39921512
 
 <style>
     .container{
@@ -41,7 +70,25 @@
         position: absolute;
         width: 100px;
         height: 16rem;
+<<<<<<< HEAD
         
     }
 </style>
 {% endblock %}
+=======
+        background: rgba(0, 0, 0, 0);
+        border:none;
+        
+    }
+    body{
+        background-image: url("{% static 'login_bg.png' %}")
+    }
+    .btn.btn-primary{
+        background-color:#f75710;
+        border:#f75710;
+    }
+
+</style>
+{% endblock %}
+</html>
+>>>>>>> 134c83ce8c0895bebd16f54ec13d3f1f39921512

@@ -40,6 +40,7 @@ input[type="submit"], button {
     #header {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
         display: flex;
         flex-direction: column;
         padding: 15px 30px;
@@ -50,6 +51,11 @@ input[type="submit"], button {
         padding: 15px 30px;
         justify-content: flex-start;
 >>>>>>> dacd6c24a3172085053810ea16d8bf730b721346
+=======
+        flex-direction: column;
+        padding: 15px 30px;
+        justify-content: flex-start;
+>>>>>>> 134c83ce8c0895bebd16f54ec13d3f1f39921512
 =======
         flex-direction: column;
         padding: 15px 30px;

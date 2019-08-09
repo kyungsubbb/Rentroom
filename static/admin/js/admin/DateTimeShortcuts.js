@@ -22,6 +22,7 @@
         calendarDivName1: 'calendarbox', // name of calendar <div> that gets toggled
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
         calendarDivName2: 'calendarin',  // name of <div> that contains calendar
         calendarLinkName: 'calendarlink',// name of the link that is used to toggle
         clockDivName: 'clockbox',        // name of clock <div> that gets toggled
@@ -29,12 +30,17 @@
 =======
 =======
 >>>>>>> 134c83ce8c0895bebd16f54ec13d3f1f39921512
+=======
+>>>>>>> 134c83ce8c0895bebd16f54ec13d3f1f39921512
         calendarDivName2: 'calendarin', // name of <div> that contains calendar
         calendarLinkName: 'calendarlink', // name of the link that is used to toggle
         clockDivName: 'clockbox', // name of clock <div> that gets toggled
         clockLinkName: 'clocklink', // name of the link that is used to toggle
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> dacd6c24a3172085053810ea16d8bf730b721346
+=======
+>>>>>>> 134c83ce8c0895bebd16f54ec13d3f1f39921512
 =======
 >>>>>>> 134c83ce8c0895bebd16f54ec13d3f1f39921512
         shortCutsClass: 'datetimeshortcuts', // class of the clock and cal shortcuts
@@ -78,9 +84,12 @@
         addTimezoneWarning: function(inp) {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
             var $ = django.jQuery;
 =======
 >>>>>>> dacd6c24a3172085053810ea16d8bf730b721346
+=======
+>>>>>>> 134c83ce8c0895bebd16f54ec13d3f1f39921512
 =======
 >>>>>>> 134c83ce8c0895bebd16f54ec13d3f1f39921512
             var warningClass = DateTimeShortcuts.timezoneWarningClass;
@@ -94,10 +103,14 @@
             // Check if warning is already there.
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
             if ($(inp).siblings('.' + warningClass).length) {
 =======
             if (inp.parentNode.querySelectorAll('.' + warningClass).length) {
 >>>>>>> dacd6c24a3172085053810ea16d8bf730b721346
+=======
+            if (inp.parentNode.querySelectorAll('.' + warningClass).length) {
+>>>>>>> 134c83ce8c0895bebd16f54ec13d3f1f39921512
 =======
             if (inp.parentNode.querySelectorAll('.' + warningClass).length) {
 >>>>>>> 134c83ce8c0895bebd16f54ec13d3f1f39921512
@@ -124,6 +137,7 @@
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
             var $warning = $('<span>');
             $warning.attr('class', warningClass);
             $warning.text(message);
@@ -134,13 +148,18 @@
 =======
 =======
 >>>>>>> 134c83ce8c0895bebd16f54ec13d3f1f39921512
+=======
+>>>>>>> 134c83ce8c0895bebd16f54ec13d3f1f39921512
             var warning = document.createElement('span');
             warning.className = warningClass;
             warning.textContent = message;
             inp.parentNode.appendChild(document.createElement('br'));
             inp.parentNode.appendChild(warning);
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> dacd6c24a3172085053810ea16d8bf730b721346
+=======
+>>>>>>> 134c83ce8c0895bebd16f54ec13d3f1f39921512
 =======
 >>>>>>> 134c83ce8c0895bebd16f54ec13d3f1f39921512
         },
@@ -158,10 +177,14 @@
             now_link.setAttribute('href', "#");
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
             now_link.appendChild(document.createTextNode(gettext('Now')));
 =======
             now_link.textContent = gettext('Now');
 >>>>>>> dacd6c24a3172085053810ea16d8bf730b721346
+=======
+            now_link.textContent = gettext('Now');
+>>>>>>> 134c83ce8c0895bebd16f54ec13d3f1f39921512
 =======
             now_link.textContent = gettext('Now');
 >>>>>>> 134c83ce8c0895bebd16f54ec13d3f1f39921512
@@ -396,10 +419,14 @@
             });
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
             django.jQuery(document).on('keyup', function(event) {
 =======
             document.addEventListener('keyup', function(event) {
 >>>>>>> dacd6c24a3172085053810ea16d8bf730b721346
+=======
+            document.addEventListener('keyup', function(event) {
+>>>>>>> 134c83ce8c0895bebd16f54ec13d3f1f39921512
 =======
             document.addEventListener('keyup', function(event) {
 >>>>>>> 134c83ce8c0895bebd16f54ec13d3f1f39921512
@@ -460,6 +487,7 @@
             // the format needs to be escaped a little
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
             format = format.replace('\\', '\\\\');
             format = format.replace('\r', '\\r');
             format = format.replace('\n', '\\n');
@@ -468,13 +496,18 @@
 =======
 =======
 >>>>>>> 134c83ce8c0895bebd16f54ec13d3f1f39921512
+=======
+>>>>>>> 134c83ce8c0895bebd16f54ec13d3f1f39921512
             format = format.replace('\\', '\\\\')
                 .replace('\r', '\\r')
                 .replace('\n', '\\n')
                 .replace('\t', '\\t')
                 .replace("'", "\\'");
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> dacd6c24a3172085053810ea16d8bf730b721346
+=======
+>>>>>>> 134c83ce8c0895bebd16f54ec13d3f1f39921512
 =======
 >>>>>>> 134c83ce8c0895bebd16f54ec13d3f1f39921512
             return function(y, m, d) {
