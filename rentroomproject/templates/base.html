@@ -23,7 +23,7 @@
             {% if user.is_authenticated %}
             <div class="dropdown-menu dropdown-menu-right profile-dropdown" role="menu">
                 <a class="dropdown-item" href="#">my page</a>
-                <a class="dropdown-item" href="{% url 'register' %}">방 등록하기</a>
+                <a class="dropdown-item" href="{% url 'newroom' %}">방 등록하기</a>
                 <a class="dropdown-item" href="javascript:{document.getElementById('logout').submit()}">로그아웃</a>
                 <form id="logout" method="POST" action="{% url 'logout' %}">
                     {% csrf_token %} <input type="hidden" />

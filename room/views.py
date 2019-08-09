@@ -1,6 +1,7 @@
 from django.shortcuts import render, get_object_or_404,redirect
 from .models import Room
 from django.utils import timezone
+from .form import RoomPost
 
 def home(request):
     rooms = Room.objects
@@ -26,6 +27,15 @@ def create(request):
     room.img1 = request.GET['img1']
     room.img2 = request.GET['img2']
     room.img3 = request.GET['img3']
-    room.pub_date = timezone.datetime.now()
     room.save()
     return redirect('/room/' + str(room.id))
+
+def roompost(request):
+    if request.method == 'POST':
+        form = RoomPost(request.POST, request.FILES)
+        if form.is_valid():
+            form.save()
+            return redirect('home')
+    else:
+        form = RoomPost()
+    return render(request,'register.html', {'form':form})
