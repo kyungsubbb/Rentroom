@@ -1,6 +1,5 @@
 {% extends 'base.html' %}
 {% block contents %}
-<<<<<<< HEAD
 {% load staticfiles %}
 <!DOCTYPE html>
 <html lang="en">
@@ -23,27 +22,18 @@
 <br><br>
 <div class="a"></div>
 
-=======
-
-<br><br>
->>>>>>> 134c83ce8c0895bebd16f54ec13d3f1f39921512
 <div class = "container">
         <br>
         <h3>당신의 방을 등록하세요!</h3>
         <br><br>
 
-<<<<<<< HEAD
     <form method="POST" action="" enctype="multipart/form-data">
-=======
-    <form method="POST" action='' enctype="multipart/form-data">
->>>>>>> 134c83ce8c0895bebd16f54ec13d3f1f39921512
         {% csrf_token %}
         <table>
             {{form.as_table}}
         </table>
         <br><br>
 
-<<<<<<< HEAD
         <div class = "address_map">
         <input type="text" id="sample5_address" name="sample5_address" placeholder="주소">
         <input type="button" onclick="sample5_execDaumPostcode()" value="주소 검색"><br>
@@ -101,13 +91,10 @@
             }
         </script>
         </div>
-=======
->>>>>>> 134c83ce8c0895bebd16f54ec13d3f1f39921512
 <br><br>
             <input class="btn btn-dark" type="submit" value="등록하기">
     </form>
 
-<<<<<<< HEAD
 
 </div>
 
@@ -115,8 +102,3 @@
 
 </body>
 </html>
-=======
-</div>
-
-{% endblock %}
->>>>>>> 134c83ce8c0895bebd16f54ec13d3f1f39921512
