@@ -40,14 +40,10 @@ def roompost(request):
     if request.method == 'POST':
         form = RoomPost(request.POST, request.FILES)
         if form.is_valid():
-<<<<<<< HEAD
             post = form.save(commit=False)
             post.pub_date = timezone.now()
             post.sample5_address = request.POST.get('sample5_address')
             post.save()
-=======
-            form.save()
->>>>>>> 134c83ce8c0895bebd16f54ec13d3f1f39921512
             return redirect('home')
     else:
         form = RoomPost()
